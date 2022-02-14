@@ -2,29 +2,29 @@ function addInCartMessage(title, price) {
     let productName = title;
     let productPrice = price;
 
-    let message = title;
-    let message = "за price теперь в корзине!";
+    
+    // Задание №1.1. Оповещение о добавлении в корзину
 
+    let message// создайте переменную message
+    message = title; // присвойте переменной message значение переменной productName
+
+    message +=' ' ;// добавьте в конец переменной message пробел
+
+    message += 'за' ; // добавьте в конец переменной message текст 'за'
+    message +=' ' ; // добавьте в конец переменной message пробел
+
+    message += price ; // добавьте в конец переменной message значение переменной productPrice
+    message +=' '; // добавьте в конец переменной message пробел
+
+    message += 'теперь в корзине!'; // добавьте в конец переменной message текст 'теперь в корзине!'
+    
+    console.log(productName);
+    console.log(productPrice);
     console.log(message);
 
 
-  
-    // Задание №1.1. Оповещение о добавлении в корзину
-
-    // создайте переменную message
-    // присвойте переменной message значение переменной productName
-    // добавьте в конец переменной message пробел
-    // добавьте в конец переменной message текст 'за'
-    // добавьте в конец переменной message пробел
-    // добавьте в конец переменной message значение переменной productPrice
-    // добавьте в конец переменной message пробел
-    // добавьте в конец переменной message текст 'теперь в корзине!'
     // выведите переменную message в консоль
-    // добавила комментарий
-    // еще один комментарий
-    // и еще один
-    // комментарий
-
+    
     // Конец решения задания №1.1.
 
     return message;
@@ -34,9 +34,11 @@ function addInCartCountChange(value) {
 
     // Задание №1.2. Увеличение количества в корзине
     let oldValue = value;
-    let newValue = value;
+    let newValue = (value + 1);
 
     console.log(newValue + 1);
+    console.log(oldValue);
+    console.log(newValue);
 
     // создайте переменную newValue
     // присвойте ей значение oldValue
@@ -52,7 +54,7 @@ function addInCartSumChange(sum, delta) {
     let oldSum = sum;
     let difference = delta;
     let newSum = (oldSum + difference);
-    let newSumText = (newSum + "P");
+    let newSumText = (newSum + ' ₽');
 
     // Задание №1.3. Увеличение суммы в корзине
 
