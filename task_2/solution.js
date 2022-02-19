@@ -1,25 +1,26 @@
 function calcShipping(sum, min, shipping) {
     let productsSum = sum; // сумма в корзине
-    let freeShippingMinSum = min; // минимальная цена для бесплатной доставки
-    let shippingSum = shipping;
-
+    let freeShippingMinSum = min;
+        
+    // минимальная цена для бесплатной доставки
+   
     // Задание №2.1. Рассчитать доставку
-
-                                          // если productsSum равно 0,
-    if(productsSum == 0) {              //то shippingSum присвоить значение 0
+    let shippingPrice = shipping;
+    min = 700
+    shipping = 200
+      //если productsSum равно 0 или если productsSum Больше или равна freeShippingMinSum,
+      //то shippingSum присвоить значение 0
+    if(productsSum == 0 || productsSum >= freeShippingMinSum)  {              
         shippingSum = 0;
-        console.log('Корзина пуста');
-    }
-    if(productsSum >= freeShippingMinSum)  {        // если productsSum Больше или равна freeShippingMinSum, 
-        shippingSum = 0;                            //то shippingSum присвоить значение 0
         console.log('Доставка бесплатная');
     }
-    if(productsSum > 0) && (productsSum < freeShippingMinSum) {    // если productsSum больше 0 и меньше freeShippingMinSum,
+    // если productsSum больше 0 и меньше freeShippingMinSum,
+    //то shippingSum присвоить значение sippingPrice
+    if (productsSum < freeShippingMinSum) {      
         shippingSum = shippingPrice;                             
-        console.log('Доставка платная');                        //то shippingSum присвоить значение sippingPrice
+        console.log('Доставка платная');                        
     } 
       
-
     // Конец решения задания №2.1.
 
     return shippingSum;
@@ -28,11 +29,13 @@ function calcShipping(sum, min, shipping) {
 function calcDiscount(sum, min, discount) {
     let productsSum = sum; // сумма в корзине
     let discountMinSum = min; // минимальная цена для скидки
+    min = 700;
     let discountPart = discount; // величина скидки в процентах
+    discount = 10% 
 
-    // Задание №2.2. Рассчитать скидку
+        // Задание №2.2. Рассчитать скидку
 
-    // создайте переменную discountSum
+     // создайте переменную discountSum
 
     // если productsSum больше или равно discountMinSum,
     // то присвойте discountSum значение discountPart процентов от productsSum,
@@ -40,7 +43,7 @@ function calcDiscount(sum, min, discount) {
 
     // Конец решения задания №2.2.
 
-    return discountSum;
+    return discountSum
 }
 
 function calcInvoice({sum, discountMinSum, discountPart, shippingFreeMinSum, shippingPrice}) {
