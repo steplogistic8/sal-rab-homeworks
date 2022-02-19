@@ -1,11 +1,11 @@
 function calcShipping(sum, min, shipping) {
     let productsSum = sum; // сумма в корзине
     let freeShippingMinSum = min; // минимальная цена для бесплатной доставки
-    
+    let shippingSum = shipping;
 
     // Задание №2.1. Рассчитать доставку
 
-    let shippingSum = shipping;     // если productsSum равно 0,
+                                          // если productsSum равно 0,
     if(productsSum == 0) {              //то shippingSum присвоить значение 0
         shippingSum = 0;
         console.log('Корзина пуста');
@@ -14,13 +14,11 @@ function calcShipping(sum, min, shipping) {
         shippingSum = 0;                            //то shippingSum присвоить значение 0
         console.log('Доставка бесплатная');
     }
-    if(productsSum > 0) (productsSum < freeShippingMinSum) {    // если productsSum больше 0 и меньше freeShippingMinSum,
+    if(productsSum > 0) && (productsSum < freeShippingMinSum) {    // если productsSum больше 0 и меньше freeShippingMinSum,
         shippingSum = shippingPrice;                             
         console.log('Доставка платная');                        //то shippingSum присвоить значение sippingPrice
     } 
       
-
-    
 
     // Конец решения задания №2.1.
 
