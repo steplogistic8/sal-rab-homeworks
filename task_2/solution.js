@@ -7,7 +7,7 @@ function calcShipping(sum, min, shipping) {
    
     // Задание №2.1. Рассчитать доставку
        
-     min = 700;
+     freeShippingMinSum = 700;
      shippingPrice = 200;
     
       //если productsSum равно 0 или если productsSum Больше или равна freeShippingMinSum,
