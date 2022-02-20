@@ -16,7 +16,7 @@ function calcShipping(sum, min, shipping) {
         shippingSum = 0;
         console.log('Доставка бесплатная');
     } else {
-       (productsSum > 0 && productsSum < freeShippingMinSum)       
+       (productsSum > 0 || productsSum < freeShippingMinSum)       
         shippingSum = shippingPrice;                             
         console.log('Доставка платная');                        
     } 
