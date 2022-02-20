@@ -38,7 +38,7 @@ function calcDiscount(sum, min, discount) {
 
         // Задание №2.2. Рассчитать скидку
 
-    if(productsSum > discountMinSum || productsSum == discountMinSum) {   // если productsSum больше или равно discountMinSum,
+    if(productsSum >= discountMinSum) {   // если productsSum больше или равно discountMinSum,
        discountSum = (productsSum * discountPart)
        console.log("Скидка применяется") // то присвойте discountSum значение discountPart процентов от productsSum,
     } else {
@@ -74,7 +74,7 @@ function calcInvoice({sum, discountMinSum, discountPart, shippingFreeMinSum, shi
     let freeShipping; // создайте переменную freeShipping
     // запишите без использования if или любых других условий:
    
-    freeShipping = !true // если shippingSum равно нулю, то freeShipping должна быть равна true, 
+    freeShipping = !0 // если shippingSum равно нулю, то freeShipping должна быть равна true, 
     //иначе freeShipping должна быть равна false
 
     // Конец решения задачи №2.3.
