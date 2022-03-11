@@ -39,11 +39,11 @@ function calcDiscount(sum, min, discount) {
 
     if(productsSum >= discountMinSum) {   // если productsSum больше или равно discountMinSum,
        discountSum = (productsSum * discountPart / 100)
-       console.log("Скидка применяется") // то присвойте discountSum значение 
+        // то присвойте discountSum значение 
     } else {                                // discountPart процентов от productsSum,
         
         discountSum = 0;
-        console.log("Без скидки")
+        
 
     } 
     
